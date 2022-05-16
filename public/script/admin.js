@@ -1,8 +1,16 @@
+$('#mn').keyup(function (event) {
+    if (event.keyCode === 13) {
+        $('#searchbtn').click();
+    }
+})
+
 const MovieContainer=document.getElementById('movie-container');
 const moviename=document.getElementById('mn');
+
 // const Actor=;
 // const Actress;
 // const URl;
+alert('welcome admin');
 let counter=0;
 const SearchBtn=document.getElementById('searchbtn');
 const text=$('.movie>#name').value;
@@ -146,7 +154,9 @@ function moviedisplayer(movie){
                 Actor :<p id="${counter}actor" class="act">${x.LeadActor}</p>
                 Actress: <p id="${counter}actress" class="act">${x.LeadActress}</p>
                 </div>
-                Url:<h3 id="${counter}url" class="link">${x.URL}</h3>
+                Url:<h3 id="url" class="link">
+                <a href=${x.URL}>${x.URL}</a>
+            </h3>
                 <div class="options">
                 <button type="submit" class="option modify"  id=${counter}m onClick="Modify(this.id)">Modify</button>
                 <button type="submit" class="option delete"  id=${counter}d onClick="Delete(this.id)">Delete</button>

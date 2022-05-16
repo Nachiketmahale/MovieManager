@@ -22,7 +22,9 @@ for(let x of movie){
                 <p id="actor" class="act">Actor :${x.LeadActor}</p>
                 <p id="actress" class="act">Actress:${x.LeadActress}</p>
             </div>
-            <h3 id="url" class="link">Url:${x.URL}</h3>
+            <h3 id="url" class="link">
+                <a href=${x.URL}>Url:${x.URL}</a>
+            </h3>
         `;
         MovieContainer.append(Element);
 }
@@ -44,12 +46,14 @@ SearchBtn.addEventListener('click',()=>{
         const Element=document.createElement('div');
         Element.classList.add('movie');
         Element.innerHTML=`
-            <h3 id="name" class="nam">MovieName: ${x.MovieName}</h3>
+            <h3 id="name" class="nam">${x.MovieName}</h3>
             <div id="star" class="str">
                 <p id="actor" class="act">Actor :${x.LeadActor}</p>
                 <p id="actress" class="act">Actress:${x.LeadActress}</p>
             </div>
-            <h3 id="url" class="link">Url:${x.URL}</h3>
+            <h3 id="url" class="link">
+                <a href=${x.URL}>Url:${x.URL}</a>
+            </h3>
         `;
         console.log('after');
         console.log(MovieContainer);

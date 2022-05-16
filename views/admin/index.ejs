@@ -53,7 +53,7 @@
         .overflow-y{
             overflow-y: scroll;
         }
-        form{
+        #form{
           display: flex;
           align-items: center;
         }
@@ -92,6 +92,7 @@
 </head>
 <!-- manual script -->
 <body>
+    <a href=""></a>
     <div id="outer-wrapper">
         <div id="wrapper" class="container">
             <header>
@@ -105,13 +106,12 @@
                 </div>
             </header>
             <main>
-                <h1>Welcome admin</h1>
-                <form class="d-flex justify-content-center align-items-center">
+                <div id="form" class="d-flex justify-content-center align-items-center">
                     <div id="search" class="d-flex">
                         <input type="text" placeholder="Movie name" class="flex-1" id="mn" name="mn">
                         <button id="searchbtn" type="button">Search</button>
                     </div>
-                </form>
+                </div>
                 <h3 style="text-align: center;margin-top: 2rem;">Movies</h3>
                 <div id="movie-container" class="row">  
                 </div> 
