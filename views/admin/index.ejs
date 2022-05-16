@@ -1,0 +1,158 @@
+<%- include('../header')%>
+<head>
+    <script>
+        let movie=<%- JSON.stringify(movies); %>
+        // console.log("<%= movies.name %>");
+        console.log(movie);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .options{
+            margin:.5rem 0px;
+            border:1px solid white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .option{
+            padding:10px;
+        }
+        .option:hover{
+            background:white;
+            color:black;
+        }
+        .hide{
+           visibility: hidden;
+        }
+        .show{
+            display: block;
+        }
+        #movieditform{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            padding:4rem;
+            display: flex;
+            background:#1b1a1ae6;
+        }
+        #movieditform form{
+            border:1px solid white;
+            background: white;
+            color:black;
+            flex:1;
+            overflow-y: scroll;
+            row-gap: 1rem;
+            margin-top: 2rem;
+            flex-flow: column nowrap;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        .overflow-y{
+            overflow-y: scroll;
+        }
+        form{
+          display: flex;
+          align-items: center;
+        }
+        .field{
+            margin: 10px 0px;
+            padding:10px;
+        }
+        .field label{
+            color:black;
+        }
+        #movieditform form input, #movieditform form button{
+            min-width:200px;
+            max-width: 300px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding:5px 10px;
+            background:white;
+            color:black;
+            outline: none;
+        }
+        #movieditform form button{
+            margin: 10px 0px;
+            color:black;
+        }
+        #closeoverlay{
+            position: absolute;
+            top:77px;
+            right:54px;
+            border:1px solid black;
+            background: white
+            ;
+            color:black;
+            padding:10px;
+        }
+    </style>
+</head>
+<!-- manual script -->
+<body>
+    <div id="outer-wrapper">
+        <div id="wrapper" class="container">
+            <header>
+                <div id="header-wrapper" class="container">
+                    <div id="logo">
+                        <a href="/" class="navlink">Movies</a>
+                    </div>
+                    <nav>
+                        <a href="/admin/AddMovie" class="navlink">Add Movie</a>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <h1>Welcome admin</h1>
+                <form class="d-flex justify-content-center align-items-center">
+                    <div id="search" class="d-flex">
+                        <input type="text" placeholder="Movie name" class="flex-1" id="mn" name="mn">
+                        <button id="searchbtn" type="button">Search</button>
+                    </div>
+                </form>
+                <h3 style="text-align: center;margin-top: 2rem;">Movies</h3>
+                <div id="movie-container" class="row">  
+                </div> 
+            </main>
+        </div>
+    </div>
+    <div id="movieditform" class="hide">
+        <form>
+            <div id="moviegetter" class="field">
+                <label for="mn">Movie Name :</label>
+                <input type="text" placeholder="Movie Name" name="mon" id="mon" required>
+            </div>
+            <div id="actorgetter" class="field">
+                <label for="la">Lead Actor :</label>
+                <input type="text" placeholder="Lead Actor" name="la" id="la" required>
+
+            </div>
+            <div id="actressgetter" class="field">
+                <label for="lac">Lead Actress :</label>
+                <input type="text" placeholder="Lead Actress" name="lac" id="lac" required>
+            </div>
+            <div id="urlgetter" class="field">
+                <label for="lac">URL :</label>
+                <input type="text" placeholder="URL for movie" name="url" id="url"  required>
+            </div>
+            <!-- <div id="categorygetter" class="field">
+                <label for="category">Category</label>
+                <select name="category" id="category" required>
+                    <option value="Hollywood">Hollywood</option>
+                    <option value="Bollywood">Bollywood</option>
+                    <option value="Tollywood">Tollywood</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div> -->
+            <button type="button" id="change">Change</button>
+        </form>
+        <button id="closeoverlay" onClick="hideoverlay()">
+            close
+        </button>
+    </div>
+    <script defer src="/script/admin.js">
+    </script>
+</body>
+</html>

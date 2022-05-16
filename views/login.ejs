@@ -1,0 +1,33 @@
+<%- include('header')%>
+<head>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div id="outer-wrapper">
+        <div id="wrapper" class="container">
+            <header>
+                <div id="logo">
+                    <a href="/" class="navlink">Movies</a>
+                </div>
+                <nav>
+                    <a href="/CreateAccount" class="navlink">Create Account</a>
+                </nav>
+            </header>
+            <main >
+                <h1>Login</h1>
+                <form action="/ExistingAccount/details" method="POST" class="d-flex justify-content-center align-items-center">
+                    <div id="emailgetter" class="field">
+                        <label for="email">Email :</label>
+                        <input type="email" placeholder="Email" id="email" name="email" required>
+                    </div>
+                    <div id="passwordgetter" class="field">
+                        <label for="password">Password :</label>
+                        <input type="password" placeholder="Password for account" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </main>
+        </div>  
+    </div>
+</body>
+</html>

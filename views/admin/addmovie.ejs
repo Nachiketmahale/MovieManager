@@ -1,0 +1,51 @@
+<%- include('../header')%>
+<head>
+    <link rel="stylesheet" href="/css/addmovie.css">
+</head>
+<body>
+    <div id="outer-wrapper">
+        <div id="wrapper" class="container">
+            <header>
+                <div id="logo">
+                    <a href="/" class="navlink">Movies</a>
+                </div>
+            </header>
+            <main>
+                <h1>Add Movie</h1>
+                <form action="/admin/AddMovie" method="POST" class="d-flex justify-content-center align-items-center"> 
+                    <div id="moviegetter" class="field">
+                        <label for="mn">Movie Name</label>
+                        <input type="text" placeholder="Movie Name" name="mn" id="mn" required>
+                    </div>
+                    <div id="actorgetter" class="field">
+                        <label for="la">Lead Actor</label>
+                        <input type="text" placeholder="Lead Actor" name="la" id="la" required>
+        
+                    </div>
+                    <div id="actressgetter" class="field">
+                        <label for="lac">Lead Actress</label>
+                        <input type="text" placeholder="Lead Actress" name="lac" id="lac" required>
+                    </div>
+                    <div id="urlgetter" class="field">
+                        <label for="lac">URL</label>
+                        <input type="text" placeholder="URL for movie" name="url" id="url" required>
+                    </div>
+                    <!-- <div id="categorygetter" class="field">
+                        <label for="category">Category</label>
+                        <select name="category" id="category" required>
+                            <option value="Hollywood">Hollywood</option>
+                            <option value="Bollywood">Bollywood</option>
+                            <option value="Tollywood">Tollywood</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div> -->
+                    <button type="submit" id="add">Add Movie</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <script>
+        $('#add').onclick=console.log($('#url').value);
+    </script>
+</body>
+</html>

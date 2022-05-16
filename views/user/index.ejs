@@ -1,0 +1,40 @@
+<%- include('../header')%>
+<head>
+    <script>
+        const movie=<%- JSON.stringify(movies); %>
+        // console.log("<%= movies.name %>");
+        console.log(movie);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<!-- manual script -->
+<body>
+    <div id="outer-wrapper">
+        <div id="wrapper" class="container">
+            <header>
+                <div id="header-wrapper" class="container">
+                    <div id="logo">
+                        <a href="/" class="navlink">Movies</a>
+                    </div>
+                    <nav>
+                        <a href="/AddMovie" class="navlink">Add Movie</a>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <form class="d-flex justify-content-center align-items-center">
+                    <div id="search" class="d-flex">
+                        <input type="text" placeholder="Movie name" class="flex-1" id="mn" name="mn">
+                        <button id="searchbtn" type="button">Search</button>
+                    </div>
+                </form>
+                <h3 style="text-align: center;margin-top: 2rem;">Movies</h3>
+                <div id="movie-container" class="row">  
+                </div> 
+            </main>
+        </div>
+    </div>
+    <script defer src="/script/user.js">
+    </script>
+</body>
+</html>

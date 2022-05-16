@@ -1,0 +1,130 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    color:#eee;
+}
+body{
+    background: black;
+}
+#logo{
+    display: inline;
+    clear: both;
+}
+nav{
+    float: right;
+    clear: both;
+}
+.newnavbar{
+    padding:.6rem 0px;
+    background: #3c3c3cc7;
+}
+a{
+    text-decoration: none;
+}
+.navlink{
+    margin:0px 1rem;
+    padding:1rem;
+    position:relative;
+    color:#71a8ff;
+}
+.navlink:hover{
+   color:#71a8ff;
+}
+.navlink::after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    transition: all ease-in-out .1s;
+}
+.navlink:hover::after{
+    width:100%;
+    left:0;
+    background:#71a8ff;
+}
+#outer-wrapper{
+    background: url('/images/background.jpg');
+    background-position: center center;
+    background-size: cover;
+    position:relative;
+
+}
+#outer-wrapper::before{
+    content: ' ';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    color:red;
+    background-image:linear-gradient(to right bottom, #090909, #0c0c0cdb, #0e0e0eeb, #101010f7, #000000ed);
+}
+#wrapper
+{
+    position:relative;
+    min-height: 100vh;
+}
+header{
+    position:fixed;
+    width: 100%;
+    top:0;  
+    left: 0;
+    padding:1rem 0px;
+    background: transparent;
+    transition: all ease-in-out 0.3s;
+}
+#header-wrapper{
+    padding:1rem 0px;
+}
+main{
+    padding:7rem 0px;
+    min-height: 100vh;
+}
+#search{
+    flex-basis:400px;
+    border:1px solid white;
+    border-radius: 5px;
+    padding:10px 1rem;
+}
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+}
+button{
+    border:none;
+    background:transparent;
+}
+.movie{
+    border:1px solid white;
+    padding:2rem;
+    margin:1rem 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    row-gap: 10px;
+    background: black;
+    max-width: 300px;
+}
+#movie-container{
+    justify-content: center;
+    align-items: center;
+}
+.nam{
+    text-align: center;
+}
+.str{
+    text-align: center;
+    font-size: 1.3rem;
+}
+.nam{
+text-align: center;
+}
+.link{
+    text-align: center;
+}
